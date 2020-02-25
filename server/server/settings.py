@@ -19,13 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 with open (BASE_DIR + "/server/config.json","r") as config:
 	obj=json.load(config)
-SECRET_KEY=obj["API_kEY"]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7^_bd3kib&be@#8quliyrf(xpcfy6e=ht0(+=hn_q2#%*2y06m'
+SECRET_KEY = obj["API_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
